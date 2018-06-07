@@ -14,9 +14,33 @@
 
 .weather-wrapper {
   position: relative;
-  padding-top: 174rpx;
+  padding-top: 20rpx;
   padding-bottom: 250rpx;
   background-color: transparent;
+}
+
+.location-wrapper {
+  margin-bottom: 60rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: rgba(0, 0, 0, .5)
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-icon {
+  margin-right: 10rpx;
+  width: 21rpx;
+  height: 30rpx;
+}
+
+.location-tips {
+  margin-top: 10rpx;
+  text-align: center;
 }
 
 .weather-bg {
@@ -75,4 +99,29 @@
 .forecast-temp {
   font-size: 40rpx;
   line-height: 56rpx
+}
+
+.day-weather {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 40rpx;
+  right: 40rpx;
+  height: 90rpx;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: rgba(0, 0, 0, .5);
+}
+
+.temp-text {
+  flex-grow: 1;
+  padding-right: 30rpx;
+  text-align: right;
+}
+
+.arrow-icon {
+  width: 13rpx;
+  height: 24rpx;
 }
