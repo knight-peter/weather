@@ -15,6 +15,7 @@ App({
     // 当小程序出现要打开的页面不存在的情况，会带上页面信息回调该函数,在回调中进行重定向处理
   },
   globalData: {
-    baseUrl: 'https://test-miniprogram.com'
+    baseUrl: 'https://test-miniprogram.com',
+    key: '08883216dcd94032848ee21f07d598df'
   }
 })

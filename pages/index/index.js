@@ -97,7 +97,7 @@ Page({
         console.log({
             city: this.data.city,
           },
-          res,
+          '测试接口：', res,
         );
         let result = res.data.result;
         // 设置当前天气
@@ -110,15 +110,26 @@ Page({
         callback && callback();
       },
     });
+    wx.request({
+      url: `https://free-api.heweather.com/s6/weather/now?location=${this.data.city}&key=${globalData.key}`,
+      success: res => {
+        console.log({
+          city: this.data.city
+        }, '和风天气：', res)
+        let result = res.data.HeWeather6[0];
+        // 设置当前天气
+        this.setNow(result);
+      }
+    })
   },
   /* 设置当前天气 */
   setNow(result) {
     let temp = result.now.temp;
-    let weather = result.now.weather;
+    let weather = result.now.cond_txt;
     this.setData({
       nowTemp: `${temp}°`,
-      nowWeather: weatherMap[weather],
-      nowWeatherBackground: `/assets/image/${weather}-bg.png`,
+      nowWeather: weather,
+      nowWeatherBackground: `/assets/image/${utils.heweather(result.now.cond_code)}-bg.png`,
     });
     // 动态设置标题栏颜色
     wx.setNavigationBarColor({
