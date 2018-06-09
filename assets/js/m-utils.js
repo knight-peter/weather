@@ -25,147 +25,360 @@ var utils = {
     let number = parseInt(num);
     switch (number) {
       case 100:
-        return 'sunny';
+        return {
+          cond_name: 'sunny',
+          color: '#cbeefd'
+        };
       case 101:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 102:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 103:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 104:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 200:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 201:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 202:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 203:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 204:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 205:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 206:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 207:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 208:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 209:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 210:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 211:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 212:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 213:
-        return 'overcast';
+        return {
+          cond_name: 'overcast',
+          color: '#c6ced2'
+        };
       case 300:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 301:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 302:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 303:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 304:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 305:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 306:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 307:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 308:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 309:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 310:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 311:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 312:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 313:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 314:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 315:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 316:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 317:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 318:
-        return 'heavyrain';
+        return {
+          cond_name: 'heavyrain',
+          color: '#c5ccd0'
+        };
       case 399:
-        return 'lightrain';
+        return {
+          cond_name: 'lightrain',
+          color: '#bdd5e1'
+        };
       case 400:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 401:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 402:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 403:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 404:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 405:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 406:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 407:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 408:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 409:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 410:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 499:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 500:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 500:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 501:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 502:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 503:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 504:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 505:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 506:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 507:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 508:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 509:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 510:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 511:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 512:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 513:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 514:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 515:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       case 900:
-        return 'sunny';
+        return {
+          cond_name: 'sunny',
+          color: '#cbeefd'
+        };
       case 901:
-        return 'snow';
+        return {
+          cond_name: 'snow',
+          color: '#aae1fc'
+        };
       case 999:
-        return 'cloudy';
+        return {
+          cond_name: 'cloudy',
+          color: '#deeef6'
+        };
       default:
         return true;
     }

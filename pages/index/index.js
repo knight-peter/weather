@@ -101,7 +101,7 @@ Page({
         );
         let result = res.data.result;
         // 设置当前天气
-        this.setNow(result);
+        // this.setNow(result);
         // 设置未来24个小时天气
         this.setForecastArr(result);
         this.setToday(result);
@@ -110,6 +110,7 @@ Page({
         callback && callback();
       },
     });
+    /* 获取实况天气 */
     wx.request({
       url: `https://free-api.heweather.com/s6/weather/now?location=${this.data.city}&key=${globalData.key}`,
       success: res => {
@@ -121,20 +122,32 @@ Page({
         this.setNow(result);
       }
     })
+    /* 逐小时预报 */
+    /* wx.request({
+      url: `https://free-api.heweather.com/s6/weather/hourly?location=${this.data.city}&key=${globalData.key}`,
+      success: res => {
+        console.log({
+          city: this.data.city
+        }, '和风天气-逐小时预报：', res)
+        let result = res.data.HeWeather6[0];
+        // 设置未来24个小时天气
+        this.setForecastArr(result);
+      }
+    }) */
   },
   /* 设置当前天气 */
   setNow(result) {
-    let temp = result.now.temp;
+    let temp = result.now.tmp;
     let weather = result.now.cond_txt;
     this.setData({
       nowTemp: `${temp}°`,
       nowWeather: weather,
-      nowWeatherBackground: `/assets/image/${utils.heweather(result.now.cond_code)}-bg.png`,
+      nowWeatherBackground: `/assets/image/${utils.heweather(result.now.cond_code).cond_name}-bg.png`,
     });
     // 动态设置标题栏颜色
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: weatherColorMap[weather],
+      backgroundColor: utils.heweather(result.now.cond_code).color,
     });
     // 动态设置当前页面的标题
     wx.setNavigationBarTitle({
