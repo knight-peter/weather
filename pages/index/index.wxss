@@ -126,3 +126,17 @@
   width: 13rpx;
   height: 24rpx;
 }
+
+.weather-sport {
+  position: absolute;
+  bottom: 100rpx;
+  font-size: 30rpx;
+  width: 100%;
+  text-align: center;
+  color: rgba(0, 0, 0, .5);
+}
+
+.sport-content {
+  padding: 0 40rpx;
+  text-align: left;
+}

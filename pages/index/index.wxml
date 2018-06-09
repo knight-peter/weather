@@ -12,6 +12,11 @@
   <view class="temp">{{nowTemp}}</view>
   <view class="weather">{{nowWeather}}</view>
   <image class="weather-bg" src="{{nowWeatherBackground}}" mode="'scaleToFill'"></image>
+  <!-- 运动提示 -->
+  <view class="weather-sport">
+    <!-- <view class="sport-title">{{nowSport.brf}}</view> -->
+    <view class="sport-content">{{nowSport.txt}}</view>
+  </view>
   <!-- 查看一周天气 -->
   <view class="day-weather" bindtap='onTapDayWeather'>
     <view class="day-text">{{todayDate}}</view>
