@@ -9,7 +9,7 @@ Page({
    */
   data: {
     weekWeather: [1, 2, 3, 4, 5, 6, 7],
-    city: '广州市'
+    city: '绍兴市'
   },
 
   /**
@@ -98,10 +98,12 @@ Page({
   /* 设置数据 */
   setWeekWeather(result) {
     let weekWeather = []
-    //把date设置到下一天
+
     let date = new Date()
     for (let i = 0; i < result.length; i++) {
-      date.setDate(date.getDate() + i)
+      //把date设置到下一天
+      date.setDate(date.getDate() + 1)
+
       weekWeather.push({
         day: dayMap[date.getDay()],
         date: `${utils.formatDate(date)}`,
@@ -110,7 +112,7 @@ Page({
       })
     }
     weekWeather[0].day = '今天'
-    console.log(weekWeather)
+    // console.log('result:', result, 'weekWeather:', weekWeather)
     this.setData({
       weekWeather: weekWeather
     });

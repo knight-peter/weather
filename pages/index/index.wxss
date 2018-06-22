@@ -23,7 +23,8 @@
   margin-bottom: 60rpx;
   font-size: 30rpx;
   line-height: 42rpx;
-  color: rgba(0, 0, 0, .5)
+  color: rgba(0, 0, 0, .5);
+  padding-top: 30rpx;
 }
 
 .location {
@@ -139,4 +140,65 @@
 .sport-content {
   padding: 0 40rpx;
   text-align: left;
+}
+
+.air-wrapper {
+  position: absolute;
+  right: 22rpx;
+  top: 40rpx;
+}
+
+.air {
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 50rpx;
+  display: flex;
+  overflow: hidden;
+  font-size: 32rpx;
+  line-height: 1.4;
+}
+
+.air.excellent {
+  background-color: #6ACD06;
+  border-color: #509A05;
+  color: #344D1A;
+}
+
+.air.good {
+  background-color: #FBD029;
+  border-color: #C8A621;
+  color: #7B6E39;
+}
+
+.air.ordinary {
+  background-color: #FE8800;
+  border-color: #CB6D00;
+  color: #7E5526;
+}
+
+.air.bad {
+  background-color: #FE0000;
+  border-color: #CB0000;
+  color: #7E2626;
+}
+
+.air.severe {
+  background-color: #970454;
+  border-color: #640338;
+  color: #E34A9E;
+}
+
+.air-qlty {
+  flex: 1;
+  padding: 0 15rpx 0 20rpx;
+}
+
+.air-qlty,
+.air-aqi {
+  text-align: center;
+}
+
+.air-aqi {
+  background-color: rgba(255, 255, 255, .3);
+  padding: 0 20rpx 0 15rpx;
 }

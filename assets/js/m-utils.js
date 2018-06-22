@@ -21,6 +21,33 @@ var utils = {
     var getDate = this.checkTime(date.getDate());
     return getFullYear + "-" + getMonth + "-" + getDate;
   },
+  heAir: function (qlty) {
+    switch (qlty) {
+      case '优':
+        return {
+          className: 'excellent'
+        };
+      case '良':
+      case '轻度污染':
+        return {
+          className: 'good'
+        }
+      case '中度污染':
+        return {
+          className: 'ordinary'
+        }
+      case '重度污染':
+        return {
+          className: 'bad'
+        }
+      case '严重污染':
+        return {
+          className: 'severe'
+        }
+      default:
+        return true;
+    }
+  },
   heweather: function heweather(num) {
     let number = parseInt(num);
     switch (number) {

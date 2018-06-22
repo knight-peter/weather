@@ -9,6 +9,13 @@
     <view wx:if="{{locationAuthType==1}}" class="location-tips">点击开启位置权限</view>
     <view wx:if="{{locationAuthType==2}}" class="location-tips"></view>
   </view>
+  <!-- 空气质量 -->
+  <view class="air-wrapper">
+    <view class="air {{airClass}}">
+      <view class="air-qlty">{{qlty}}</view>
+      <view class="air-aqi">{{aqi}}</view>
+    </view>
+  </view>
   <view class="temp">{{nowTemp}}</view>
   <view class="weather">{{nowWeather}}</view>
   <image class="weather-bg" src="{{nowWeatherBackground}}" mode="'scaleToFill'"></image>

@@ -31,13 +31,16 @@ Page({
     nowTemp: '',
     nowWeather: '',
     nowWeatherBackground: '',
-    city: '广州市',
+    city: '绍兴市',
     // locationTipsText: UNPROMPTED_TIPS,
     locationAuthType: UNPROMPTED,
     forecast_arr: [],
     todayTemp: '',
     todayDate: '',
-    nowSport: {}
+    nowSport: {},
+    qlty: '',
+    aqi: '',
+    airClass: ''
   },
   onLoad() {
     // 实例化API核心类
@@ -57,6 +60,7 @@ Page({
           this.getCityAndNow();
         } else {
           this.getNowWeather();
+          this.getAirGroup();
         }
       },
     });
@@ -68,6 +72,9 @@ Page({
     this.getNowWeather(() => {
       wx.stopPullDownRefresh();
     });
+    this.getAirGroup(() => {
+      wx.stopPullDownRefresh();
+    })
   },
   /* onShow() {
     wx.getSetting({
@@ -118,11 +125,10 @@ Page({
       }&key=${globalData.key}`,
       success: res => {
         console.log({
-            city: this.data.city,
-          },
-          '和风天气：',
-          res,
-        );
+          city: this.data.city,
+        }, {
+          '和风天气：': res
+        });
         let result = res.data.HeWeather6[0];
         // 设置当前天气
         this.setNow(result);
@@ -199,6 +205,36 @@ Page({
       todayDate: `${today_data.date} 今天`,
     });
   },
+  /* 获取空气质量数据集合 */
+  getAirGroup(callback) {
+    wx.request({
+      url: `https://free-api.heweather.com/s6/air?location=${
+        this.data.city
+      }&key=${globalData.key}`,
+      success: res => {
+
+        let result = res.data.HeWeather6[0];
+        // 设置空气质量
+        this.setNowAir(result);
+      },
+      complete: () => {
+        callback && callback();
+      },
+    })
+  },
+  setNowAir(result) {
+    console.log({
+      '空气质量数据集合': result
+    })
+    let aqi = result.air_now_city.aqi;
+    let qlty = result.air_now_city.qlty;
+    this.setData({
+      aqi: aqi,
+      qlty: qlty,
+      airClass: utils.heAir(qlty).className
+    })
+  },
+  /* 前往list页面 */
   onTapDayWeather() {
     wx.navigateTo({
       url: `/pages/list/list?city=${this.data.city}`,
@@ -252,6 +288,7 @@ Page({
               city: city,
             });
             that.getNowWeather();
+            that.getAirGroup();
           },
           fail: function (res) {
             // console.log(res);
